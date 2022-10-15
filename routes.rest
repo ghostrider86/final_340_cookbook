@@ -1,0 +1,227 @@
+// LOCALHOST
+###
+GET http://localhost:8080/recipes
+###
+GET http://localhost:8080/recipes/6334dc03a8cbdbc7754989c5
+###
+GET http://localhost:8080/recipes/6334dc03a8cbdbc7754989c6
+###
+GET http://localhost:8080/recipes/6334dc03a8cbdbc7754989c7
+### Create contact 
+POST http://localhost:8080/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "Name": "Christmas death",
+    "url": "https://www.bbcgoodfood.com/recipes/2793/christmas-pie",
+    "Description": "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
+    "Author": "Mary Cadogan",
+    "type": "Dessert",
+    "Ingredients": [
+      "2 tbsp olive oil",
+      "knob butter",
+      "1 onion, finely chopped",
+      "500g sausagemeat or skinned sausages",
+      "grated zest of 1 lemon",
+      "100g fresh white breadcrumbs",
+      "85g ready-to-eat dried apricots, chopped",
+      "50g chestnut, canned or vacuum-packed, chopped",
+      "2 tsp chopped fresh or 1tsp dried thyme",
+      "100g cranberries, fresh or frozen",
+      "500g boneless, skinless chicken breasts",
+      "500g pack ready-made shortcrust pastry",
+      "beaten egg, to glaze"
+    ],
+    "Method": [
+      "Heat oven to 190C/fan 170C/gas 5. Heat 1 tbsp oil and the butter in a frying pan, then add the onion and fry for 5 mins until softened. Cool slightly. Tip the sausagemeat, lemon zest, breadcrumbs, apricots, chestnuts and thyme into a bowl. Add the onion and cranberries, and mix everything together with your hands, adding plenty of pepper and a little salt.",
+      "Cut each chicken breast into three fillets lengthwise and season all over with salt and pepper. Heat the remaining oil in the frying pan, and fry the chicken fillets quickly until browned, about 6-8 mins.",
+      "Roll out two-thirds of the pastry to line a 20-23cm springform or deep loose-based tart tin. Press in half the sausage mix and spread to level. Then add the chicken pieces in one layer and cover with the rest of the sausage. Press down lightly.",
+      "Roll out the remaining pastry. Brush the edges of the pastry with beaten egg and cover with the pastry lid. Pinch the edges to seal, then trim. Brush the top of the pie with egg, then roll out the trimmings to make holly leaf shapes and berries. Decorate the pie and brush again with egg.",
+      "Set the tin on a baking sheet and bake for 50-60 mins, then cool in the tin for 15 mins. Remove and leave to cool completely. Serve with a winter salad and pickles."
+    ]
+}
+
+### PUT contact 
+PUT http://localhost:8080/recipes/6334dc03a8cbdbc7754989c8 HTTP/1.1 
+content-type: application/json
+
+{
+"Name": "Christmas buns",
+  "url": "https://www.bbcgoodfood.com/recipes/1803633/christmas-buns",
+  "Description": "Paul Hollywood's fruit rolls can be made ahead then heated up before adding a glossy glaze and citrus icing",
+  "Author": "Paul Hollywood",
+  "type": "Bread",
+  "Ingredients": [
+    "500g strong white flour, plus extra for dusting",
+    "7g sachet fast-action dried yeast",
+    "300ml milk",
+    "40g unsalted butter, softened at room temperature",
+    "1 egg",
+    "vegetable oil, for greasing",
+    "25g unsalted butter, melted",
+    "75g soft brown sugar",
+    "2 tsp ground cinnamon",
+    "100g dried cranberries",
+    "100g chopped dried apricot",
+    "50g caster sugar",
+    "zest 1 lemon",
+    "200g icing sugar"
+  ],
+  "Method": [
+    "Put the flour and 1 tsp salt into a large bowl. Make a well in the centre and add the yeast. Meanwhile, warm the milk and butter in a pan until the butter melts and the mixture is lukewarm. Add the milk mixture and egg to the flour mixture and stir until the contents come together as a soft dough (add extra flour if you need to).",
+    "Tip the dough onto a well-floured surface. Knead for 5 mins, adding more flour if necessary, until the dough is smooth, elastic and no longer sticky.",
+    "Lightly oil a bowl with the vegetable oil. Place the dough in the bowl and turn until covered in oil. Cover the bowl with cling film and set aside in a warm place for 1 hr or until doubled in size. Lightly grease a baking sheet and set aside.",
+    "For the filling, knock the dough back to its original size and turn out onto a lightly floured surface. Roll it into a 1cm-thick rectangle. Brush all over with the melted butter, then sprinkle over the sugar, cinnamon and fruit.",
+    "Roll up the dough into a tight cylinder, cut into 9 x 4cm slices and position on the prepared baking sheet, leaving a little space between. Cover with a tea towel and set aside to rise for 30 mins.",
+    "Heat oven to 190C/170C fan/gas 5. Bake the buns for 20-25 mins or until risen and golden brown. Meanwhile, melt the glaze sugar with 4 tbsp water until syrupy.",
+    "Remove from oven and glaze. Set aside to cool on a wire rack. Once cool, mix the zest and icing sugar with about 2 tbsp water to drizzle over the buns. Serve."
+  ]
+}
+### DELETE contact 
+DELETE http://localhost:8080/recipes/6341b72a7b9eb59c133ba69f HTTP/1.1
+content-type: application/json
+
+{
+    "Name": "Christmas death",
+    "url": "https://www.bbcgoodfood.com/recipes/2793/christmas-pie",
+    "Description": "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
+    "Author": "Mary Cadogan",
+    "type": "Dessert",
+    "Ingredients": [
+      "2 tbsp olive oil",
+      "knob butter",
+      "1 onion, finely chopped",
+      "500g sausagemeat or skinned sausages",
+      "grated zest of 1 lemon",
+      "100g fresh white breadcrumbs",
+      "85g ready-to-eat dried apricots, chopped",
+      "50g chestnut, canned or vacuum-packed, chopped",
+      "2 tsp chopped fresh or 1tsp dried thyme",
+      "100g cranberries, fresh or frozen",
+      "500g boneless, skinless chicken breasts",
+      "500g pack ready-made shortcrust pastry",
+      "beaten egg, to glaze"
+    ],
+    "Method": [
+      "Heat oven to 190C/fan 170C/gas 5. Heat 1 tbsp oil and the butter in a frying pan, then add the onion and fry for 5 mins until softened. Cool slightly. Tip the sausagemeat, lemon zest, breadcrumbs, apricots, chestnuts and thyme into a bowl. Add the onion and cranberries, and mix everything together with your hands, adding plenty of pepper and a little salt.",
+      "Cut each chicken breast into three fillets lengthwise and season all over with salt and pepper. Heat the remaining oil in the frying pan, and fry the chicken fillets quickly until browned, about 6-8 mins.",
+      "Roll out two-thirds of the pastry to line a 20-23cm springform or deep loose-based tart tin. Press in half the sausage mix and spread to level. Then add the chicken pieces in one layer and cover with the rest of the sausage. Press down lightly.",
+      "Roll out the remaining pastry. Brush the edges of the pastry with beaten egg and cover with the pastry lid. Pinch the edges to seal, then trim. Brush the top of the pie with egg, then roll out the trimmings to make holly leaf shapes and berries. Decorate the pie and brush again with egg.",
+      "Set the tin on a baking sheet and bake for 50-60 mins, then cool in the tin for 15 mins. Remove and leave to cool completely. Serve with a winter salad and pickles."
+    ]
+}
+
+// PRODUCTION Deploy
+###
+GET https://project-fin.onrender.com/recipes
+###
+GET https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c5
+###
+GET https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c6
+###
+GET https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c7
+
+### Create contact 
+POST https://project-fin.onrender.com/recipes HTTP/1.1
+content-type: application/json
+
+{
+    "Name": "Christmas death",
+    "url": "https://www.bbcgoodfood.com/recipes/2793/christmas-pie",
+    "Description": "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
+    "Author": "Mary Cadogan",
+    "type": "Dessert",
+    "Ingredients": [
+      "2 tbsp olive oil",
+      "knob butter",
+      "1 onion, finely chopped",
+      "500g sausagemeat or skinned sausages",
+      "grated zest of 1 lemon",
+      "100g fresh white breadcrumbs",
+      "85g ready-to-eat dried apricots, chopped",
+      "50g chestnut, canned or vacuum-packed, chopped",
+      "2 tsp chopped fresh or 1tsp dried thyme",
+      "100g cranberries, fresh or frozen",
+      "500g boneless, skinless chicken breasts",
+      "500g pack ready-made shortcrust pastry",
+      "beaten egg, to glaze"
+    ],
+    "Method": [
+      "Heat oven to 190C/fan 170C/gas 5. Heat 1 tbsp oil and the butter in a frying pan, then add the onion and fry for 5 mins until softened. Cool slightly. Tip the sausagemeat, lemon zest, breadcrumbs, apricots, chestnuts and thyme into a bowl. Add the onion and cranberries, and mix everything together with your hands, adding plenty of pepper and a little salt.",
+      "Cut each chicken breast into three fillets lengthwise and season all over with salt and pepper. Heat the remaining oil in the frying pan, and fry the chicken fillets quickly until browned, about 6-8 mins.",
+      "Roll out two-thirds of the pastry to line a 20-23cm springform or deep loose-based tart tin. Press in half the sausage mix and spread to level. Then add the chicken pieces in one layer and cover with the rest of the sausage. Press down lightly.",
+      "Roll out the remaining pastry. Brush the edges of the pastry with beaten egg and cover with the pastry lid. Pinch the edges to seal, then trim. Brush the top of the pie with egg, then roll out the trimmings to make holly leaf shapes and berries. Decorate the pie and brush again with egg.",
+      "Set the tin on a baking sheet and bake for 50-60 mins, then cool in the tin for 15 mins. Remove and leave to cool completely. Serve with a winter salad and pickles."
+    ]
+}
+
+
+### PUT contact 
+PUT https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c8 HTTP/1.1
+content-type: application/json
+
+{
+"Name": "Christmas buns",
+  "url": "https://www.bbcgoodfood.com/recipes/1803633/christmas-buns",
+  "Description": "Paul Hollywood's fruit rolls can be made ahead then heated up before adding a glossy glaze and citrus icing",
+  "Author": "Paul Hollywood",
+  "type": "Bread",
+  "Ingredients": [
+    "500g strong white flour, plus extra for dusting",
+    "7g sachet fast-action dried yeast",
+    "300ml milk",
+    "40g unsalted butter, softened at room temperature",
+    "1 egg",
+    "vegetable oil, for greasing",
+    "25g unsalted butter, melted",
+    "75g soft brown sugar",
+    "2 tsp ground cinnamon",
+    "100g dried cranberries",
+    "100g chopped dried apricot",
+    "50g caster sugar",
+    "zest 1 lemon",
+    "200g icing sugar"
+  ],
+  "Method": [
+    "Put the flour and 1 tsp salt into a large bowl. Make a well in the centre and add the yeast. Meanwhile, warm the milk and butter in a pan until the butter melts and the mixture is lukewarm. Add the milk mixture and egg to the flour mixture and stir until the contents come together as a soft dough (add extra flour if you need to).",
+    "Tip the dough onto a well-floured surface. Knead for 5 mins, adding more flour if necessary, until the dough is smooth, elastic and no longer sticky.",
+    "Lightly oil a bowl with the vegetable oil. Place the dough in the bowl and turn until covered in oil. Cover the bowl with cling film and set aside in a warm place for 1 hr or until doubled in size. Lightly grease a baking sheet and set aside.",
+    "For the filling, knock the dough back to its original size and turn out onto a lightly floured surface. Roll it into a 1cm-thick rectangle. Brush all over with the melted butter, then sprinkle over the sugar, cinnamon and fruit.",
+    "Roll up the dough into a tight cylinder, cut into 9 x 4cm slices and position on the prepared baking sheet, leaving a little space between. Cover with a tea towel and set aside to rise for 30 mins.",
+    "Heat oven to 190C/170C fan/gas 5. Bake the buns for 20-25 mins or until risen and golden brown. Meanwhile, melt the glaze sugar with 4 tbsp water until syrupy.",
+    "Remove from oven and glaze. Set aside to cool on a wire rack. Once cool, mix the zest and icing sugar with about 2 tbsp water to drizzle over the buns. Serve."
+  ]
+}
+### DELETE contact 
+DELETE https://project-fin.onrender.com/recipes/6341e18d804fa66b4abf3205 HTTP/1.1
+content-type: application/json
+
+{
+    "Name": "Christmas death",
+    "url": "https://www.bbcgoodfood.com/recipes/2793/christmas-pie",
+    "Description": "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
+    "Author": "Mary Cadogan",
+    "type": "Dessert",
+    "Ingredients": [
+      "2 tbsp olive oil",
+      "knob butter",
+      "1 onion, finely chopped",
+      "500g sausagemeat or skinned sausages",
+      "grated zest of 1 lemon",
+      "100g fresh white breadcrumbs",
+      "85g ready-to-eat dried apricots, chopped",
+      "50g chestnut, canned or vacuum-packed, chopped",
+      "2 tsp chopped fresh or 1tsp dried thyme",
+      "100g cranberries, fresh or frozen",
+      "500g boneless, skinless chicken breasts",
+      "500g pack ready-made shortcrust pastry",
+      "beaten egg, to glaze"
+    ],
+    "Method": [
+      "Heat oven to 190C/fan 170C/gas 5. Heat 1 tbsp oil and the butter in a frying pan, then add the onion and fry for 5 mins until softened. Cool slightly. Tip the sausagemeat, lemon zest, breadcrumbs, apricots, chestnuts and thyme into a bowl. Add the onion and cranberries, and mix everything together with your hands, adding plenty of pepper and a little salt.",
+      "Cut each chicken breast into three fillets lengthwise and season all over with salt and pepper. Heat the remaining oil in the frying pan, and fry the chicken fillets quickly until browned, about 6-8 mins.",
+      "Roll out two-thirds of the pastry to line a 20-23cm springform or deep loose-based tart tin. Press in half the sausage mix and spread to level. Then add the chicken pieces in one layer and cover with the rest of the sausage. Press down lightly.",
+      "Roll out the remaining pastry. Brush the edges of the pastry with beaten egg and cover with the pastry lid. Pinch the edges to seal, then trim. Brush the top of the pie with egg, then roll out the trimmings to make holly leaf shapes and berries. Decorate the pie and brush again with egg.",
+      "Set the tin on a baking sheet and bake for 50-60 mins, then cool in the tin for 15 mins. Remove and leave to cool completely. Serve with a winter salad and pickles."
+    ]
+}
