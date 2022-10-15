@@ -2,8 +2,8 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
-    description: 'Temple API'
+    title: 'CSE341 Team Project -- Cook book',
+    description: 'A program where one can view and edit recipes'
   },
   host: 'project-fin.onrender.com',
   schemes: ['https'],
