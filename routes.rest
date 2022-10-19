@@ -7,7 +7,7 @@ GET http://localhost:8080/recipes/6334dc03a8cbdbc7754989c5
 GET http://localhost:8080/recipes/6334dc03a8cbdbc7754989c6
 ###
 GET http://localhost:8080/recipes/6334dc03a8cbdbc7754989c7
-### Create contact 
+### Create recipe 
 POST http://localhost:8080/recipes HTTP/1.1
 content-type: application/json
 
@@ -41,7 +41,7 @@ content-type: application/json
     ]
 }
 
-### PUT contact 
+### PUT recipe 
 PUT http://localhost:8080/recipes/6334dc03a8cbdbc7754989c8 HTTP/1.1 
 content-type: application/json
 
@@ -77,7 +77,7 @@ content-type: application/json
     "Remove from oven and glaze. Set aside to cool on a wire rack. Once cool, mix the zest and icing sugar with about 2 tbsp water to drizzle over the buns. Serve."
   ]
 }
-### DELETE contact 
+### DELETE recipe 
 DELETE http://localhost:8080/recipes/6341b72a7b9eb59c133ba69f HTTP/1.1
 content-type: application/json
 
@@ -121,7 +121,7 @@ GET https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c6
 ###
 GET https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c7
 
-### Create contact 
+### Create recipe 
 POST https://project-fin.onrender.com/recipes HTTP/1.1
 content-type: application/json
 
@@ -156,7 +156,7 @@ content-type: application/json
 }
 
 
-### PUT contact 
+### PUT recipe 
 PUT https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c8 HTTP/1.1
 content-type: application/json
 
@@ -192,7 +192,7 @@ content-type: application/json
     "Remove from oven and glaze. Set aside to cool on a wire rack. Once cool, mix the zest and icing sugar with about 2 tbsp water to drizzle over the buns. Serve."
   ]
 }
-### DELETE contact 
+### DELETE recipe 
 DELETE https://project-fin.onrender.com/recipes/6341e18d804fa66b4abf3205 HTTP/1.1
 content-type: application/json
 
