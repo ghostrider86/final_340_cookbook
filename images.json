@@ -1,0 +1,38 @@
+
+{
+    "Image":{
+      "Name": "Christmas pie Image",
+      "Quality": "100",
+      "Description": "Image of a Christmas themed pie.",
+      "Type": "jpg"
+  },
+  
+  "Image2":{
+    "Name": "Simmer-&-stir Christmas cake Image",
+    "Quality": "90",
+    "Description": "Image of a Christmas themed cake. ",
+    "Type": "jpeg"
+  },
+  "Image3":{
+    "Name": "Christmas cupcakes Image",
+    "Quality": "88",
+    "Description": "Image of a Christmas themed cupcakes.",
+    "Type": "png"
+  },
+  
+  "Image4":{
+    "Name": "Christmas buns Image",
+    "url": "https://www.bbcgoodfood.com/recipes/1803633/christmas-buns",
+    "Quality": "100",
+    "Description": "Image of a Christmas themed bread buns.",
+    "Type": "jpg"
+  },
+  "Image5":{
+    "Name": "Christmas cupcakes Image",
+    "url": "https://www.bbcgoodfood.com/recipes/981634/christmas-cupcakes",
+    "Quality": "96",
+    "Description": "Image of a Christmas themed cupcakes.",
+    "Type": "jpeg"
+  }
+  }
+  
