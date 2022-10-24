@@ -111,6 +111,54 @@ content-type: application/json
     ]
 }
 
+###
+GET http://localhost:8080/comments
+### Create comment 
+POST http://localhost:8080/comments HTTP/1.1
+content-type: application/json
+
+
+### Update comment 
+PUT http://localhost:8080/comments HTTP/1.1
+content-type: application/json
+
+
+### Delete comment 
+DELETE http://localhost:8080/comments HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:8080/images
+### Create image 
+POST http://localhost:8080/images HTTP/1.1
+content-type: application/json
+
+
+### Update image 
+PUT http://localhost:8080/images HTTP/1.1
+content-type: application/json
+
+
+### Delete image 
+DELETE http://localhost:8080/images HTTP/1.1
+content-type: application/json
+
+###
+GET http://localhost:8080/user
+### Create user 
+POST http://localhost:8080/user HTTP/1.1
+content-type: application/json
+
+
+### Update user 
+PUT http://localhost:8080/user HTTP/1.1
+content-type: application/json
+
+
+### Delete user 
+DELETE http://localhost:8080/user HTTP/1.1
+content-type: application/json
+
 // PRODUCTION Deploy
 ###
 GET https://project-fin.onrender.com/recipes
@@ -225,3 +273,51 @@ content-type: application/json
       "Set the tin on a baking sheet and bake for 50-60 mins, then cool in the tin for 15 mins. Remove and leave to cool completely. Serve with a winter salad and pickles."
     ]
 }
+
+###
+GET https://project-fin.onrender.com/comments
+### Create comment 
+POST https://project-fin.onrender.com/comments HTTP/1.1
+content-type: application/json
+
+
+### Update comment 
+PUT https://project-fin.onrender.com/comments HTTP/1.1
+content-type: application/json
+
+
+### Delete comment 
+DELETE https://project-fin.onrender.com/comments HTTP/1.1
+content-type: application/json
+
+###
+GET https://project-fin.onrender.com/images
+### Create image 
+POST https://project-fin.onrender.com/images HTTP/1.1
+content-type: application/json
+
+
+### Update image 
+PUT https://project-fin.onrender.com/images HTTP/1.1
+content-type: application/json
+
+
+### Delete user 
+DELETE https://project-fin.onrender.com/images HTTP/1.1
+content-type: application/json
+
+###
+GET https://project-fin.onrender.com/user
+### Create user 
+POST https://project-fin.onrender.com/user HTTP/1.1
+content-type: application/json
+
+
+### Update user 
+PUT https://project-fin.onrender.com/user HTTP/1.1
+content-type: application/json
+
+
+### Delete user 
+DELETE https://project-fin.onrender.com/user HTTP/1.1
+content-type: application/json
