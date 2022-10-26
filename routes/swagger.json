@@ -341,6 +341,9 @@
                 "Name": {
                   "example": "any"
                 },
+                "url": {
+                  "example": "any"
+                },
                 "Quality": {
                   "example": "any"
                 },
