@@ -22,6 +22,7 @@ const getSingle = async (req, res) => {
 const createImage = async (req, res) => {
   const image = {
     Name: req.body.Name,
+    url: req.body.url,
     Quality: req.body.Quality,
     Description: req.body.Description,
     Type: req.body.Type
