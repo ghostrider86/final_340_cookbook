@@ -2,8 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 
-const port = process.env.PORT || 8080;
+
 const app = express();
+const { auth, requiresAuth } = require('express-openid-connect');
+require('dotenv').config();
+
+const port = process.env.PORT || 8080;
 
 app
   .use(bodyParser.json())
@@ -23,11 +27,16 @@ process.on('uncaughtException', (err, origin) => {
   console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
 });
 
-const { auth, requiresAuth } = require('express-openid-connect');
-require('dotenv').config();
+
 const config = {
   authRequired: false,
   auth0Logout: true,
+  // session: {
+  //   //@ts-ignore
+  //   cookie: {
+  //     domain: 'https://project-fin.onrender.com'
+  //   }
+  // },
   secret: process.env.SECRET,
   baseURL: process.env.BASE_URL,
   clientID: process.env.CLIENT_ID,
