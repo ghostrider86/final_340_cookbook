@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Temple API",
+    "description": "Recipe API",
     "version": "1.0.0"
   },
-  "host": "project-fin.onrender.com",
+  "host": "project-finish.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

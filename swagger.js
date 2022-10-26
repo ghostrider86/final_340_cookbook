@@ -5,7 +5,7 @@ const doc = {
     title: 'CSE341 Team Project -- Cook book',
     description: 'A program where one can view and edit recipes'
   },
-  host: 'project-fin.onrender.com',
+  host: 'project-finish.onrender.com',
   schemes: ['https'],
   tags: [
   {
