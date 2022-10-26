@@ -66,9 +66,17 @@ const createRecipe = (req, res, next) => {
 
 const createUser = (req, res, next) => {
     const validationRule = {
-        firstName: 'required|string',
-        lastName: 'required|string',
-        email: 'required|string'
+        given_name: 'required|string',
+        family_name: 'required|string',
+        nickname: 'string',
+        name: 'string',
+        picture: 'string',
+        locale: 'string',
+        updated_at: 'string',
+        email: 'required|string',
+        email_verified: 'string',
+        sub: 'string',
+        sid: 'string'
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {

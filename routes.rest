@@ -172,27 +172,30 @@ content-type: application/json
 ###
 GET http://localhost:8080/user
 ###
-GET http://localhost:8080/user/6358c7b84f7bcd50e9a6b489
+GET http://localhost:8080/user/6358d90d922677cc0e9146df
 ### Create user 
 POST http://localhost:8080/user HTTP/1.1
 content-type: application/json
+
 {
-  "firstName": "Jack",
-  "lastName": "Frost",
+  "given_name": "Jack",
+  "family_name": "Frost",
   "email": "icecold@southpole.com"
 }
 
 ### Update user 
-PUT http://localhost:8080/user/6358c8084f7bcd50e9a6b48b HTTP/1.1
+PUT http://localhost:8080/user/6358d8a9045cd038fd30823e HTTP/1.1
 content-type: application/json
+
 {
-  "firstName": "Santa",
-  "lastName": "Claus",
+  "given_name": "Santa",
+  "family_name": "Claus",
+  "nickname": "St. Nick",
   "email": "christmasguy@northpole.org"
 }
 
 ### Delete user 
-DELETE http://localhost:8080/user/6358c7ed4f7bcd50e9a6b48a HTTP/1.1
+DELETE http://localhost:8080/user/6358d8f7045cd038fd30823f HTTP/1.1
 content-type: application/json
 
 // PRODUCTION Deploy
