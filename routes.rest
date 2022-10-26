@@ -178,9 +178,9 @@ POST http://localhost:8080/user HTTP/1.1
 content-type: application/json
 
 {
-  "given_name": "Jack",
-  "family_name": "Frost",
-  "email": "icecold@southpole.com"
+  "given_name": "Frosty",
+  "family_name": "the Snowman",
+  "email": "frosty@northpole.org"
 }
 
 ### Update user 
