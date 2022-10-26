@@ -118,15 +118,25 @@ GET http://localhost:8080/comments/635478ad0b4dc5c342127489
 ### Create comment 
 POST http://localhost:8080/comments HTTP/1.1
 content-type: application/json
-
+{
+  "Name": "Christmas pie Comments",
+  "Author": "Santa Claus",
+  "comment_text": "I was expecting something called Christmas Pie to be sweet, this was more savory.",
+  "recipe_id": "6334dc03a8cbdbc7754989c5"
+}
 
 ### Update comment 
-PUT http://localhost:8080/comments HTTP/1.1
+PUT http://localhost:8080/comments/635478ad0b4dc5c342127489 HTTP/1.1
 content-type: application/json
-
+{
+  "Name": "Christmas pie Comments",
+  "Author": "The Grinch",
+  "comment_text": "The recipe is average at best, I would add more salt…",
+  "recipe_id": "6334dc03a8cbdbc7754989c5"
+}
 
 ### Delete comment 
-DELETE http://localhost:8080/comments HTTP/1.1
+DELETE http://localhost:8080/comments/635478ad0b4dc5c34212748c HTTP/1.1
 content-type: application/json
 
 ###
@@ -136,15 +146,27 @@ GET http://localhost:8080/images/635478f10b4dc5c34212749a
 ### Create image 
 POST http://localhost:8080/images HTTP/1.1
 content-type: application/json
-
+{
+  "Name": "Pear & blackberry crumble with bay leaf custard Image",
+  "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/10/Pear-blackberry-crumble-with-bay-leaf-custard-0408bc1.jpg?quality=90&webp=true&resize=300,272",
+  "Quality": "100",
+  "Description": "Image of a pear and blackberry crumble next to bay leaf custard in a bowl.",
+  "Type": "jpg"
+}
 
 ### Update image 
-PUT http://localhost:8080/images HTTP/1.1
+PUT http://localhost:8080/images/635478f10b4dc5c342127497 HTTP/1.1
 content-type: application/json
-
+{
+  "Name": "Christmas pie Image",
+  "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-3855_11-d19a13d.jpg?quality=90&webp=true&resize=300,272",
+  "Quality": "100",
+  "Description": "Image of a Christmas themed pie.",
+  "Type": "jpg"
+}
 
 ### Delete image 
-DELETE http://localhost:8080/images HTTP/1.1
+DELETE http://localhost:8080/images/635478f10b4dc5c342127498 HTTP/1.1
 content-type: application/json
 
 ###
@@ -154,15 +176,23 @@ GET http://localhost:8080/user/6358c7b84f7bcd50e9a6b489
 ### Create user 
 POST http://localhost:8080/user HTTP/1.1
 content-type: application/json
-
+{
+  "firstName": "Jack",
+  "lastName": "Frost",
+  "email": "icecold@southpole.com"
+}
 
 ### Update user 
-PUT http://localhost:8080/user HTTP/1.1
+PUT http://localhost:8080/user/6358c8084f7bcd50e9a6b48b HTTP/1.1
 content-type: application/json
-
+{
+  "firstName": "Santa",
+  "lastName": "Claus",
+  "email": "christmasguy@northpole.org"
+}
 
 ### Delete user 
-DELETE http://localhost:8080/user HTTP/1.1
+DELETE http://localhost:8080/user/6358c7ed4f7bcd50e9a6b48a HTTP/1.1
 content-type: application/json
 
 // PRODUCTION Deploy
@@ -287,15 +317,25 @@ GET https://project-fin.onrender.com/comments/635478ad0b4dc5c342127489
 ### Create comment 
 POST https://project-fin.onrender.com/comments HTTP/1.1
 content-type: application/json
-
+{
+  "Name": "Christmas pie Comments",
+  "Author": "Santa Claus",
+  "comment_text": "I was expecting something called Christmas Pie to be sweet, this was more savory.",
+  "recipe_id": "6334dc03a8cbdbc7754989c5"
+}
 
 ### Update comment 
 PUT https://project-fin.onrender.com/comments HTTP/1.1
 content-type: application/json
-
+{
+  "Name": "Christmas pie Comments",
+  "Author": "The Grinch",
+  "comment_text": "The recipe is average at best, I would add more salt…",
+  "recipe_id": "6334dc03a8cbdbc7754989c5"
+}
 
 ### Delete comment 
-DELETE https://project-fin.onrender.com/comments HTTP/1.1
+DELETE https://project-fin.onrender.com/comments/635478ad0b4dc5c34212748c HTTP/1.1
 content-type: application/json
 
 ###
@@ -305,15 +345,27 @@ GET https://project-fin.onrender.com/images/635478f10b4dc5c34212749a
 ### Create image 
 POST https://project-fin.onrender.com/images HTTP/1.1
 content-type: application/json
-
+{
+  "Name": "Pear & blackberry crumble with bay leaf custard Image",
+  "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/10/Pear-blackberry-crumble-with-bay-leaf-custard-0408bc1.jpg?quality=90&webp=true&resize=300,272",
+  "Quality": "100",
+  "Description": "Image of a pear and blackberry crumble next to bay leaf custard in a bowl.",
+  "Type": "jpg"
+}
 
 ### Update image 
-PUT https://project-fin.onrender.com/images HTTP/1.1
+PUT https://project-fin.onrender.com/images/635478f10b4dc5c342127497 HTTP/1.1
 content-type: application/json
+{
+  "Name": "Christmas pie Image",
+  "url": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-3855_11-d19a13d.jpg?quality=90&webp=true&resize=300,272",
+  "Quality": "100",
+  "Description": "Image of a Christmas themed pie.",
+  "Type": "jpg"
+}
 
-
-### Delete user 
-DELETE https://project-fin.onrender.com/images HTTP/1.1
+### Delete image 
+DELETE https://project-fin.onrender.com/images/635478f10b4dc5c342127498 HTTP/1.1
 content-type: application/json
 
 ###
@@ -323,13 +375,21 @@ GET https://project-fin.onrender.com/user/6358c7b84f7bcd50e9a6b489
 ### Create user 
 POST https://project-fin.onrender.com/user HTTP/1.1
 content-type: application/json
-
+{
+  "firstName": "Jack",
+  "lastName": "Frost",
+  "email": "icecold@southpole.com"
+}
 
 ### Update user 
-PUT https://project-fin.onrender.com/user HTTP/1.1
+PUT https://project-fin.onrender.com/user/6358c8084f7bcd50e9a6b48b HTTP/1.1
 content-type: application/json
-
+{
+  "firstName": "Santa",
+  "lastName": "Claus",
+  "email": "christmasguy@northpole.org"
+}
 
 ### Delete user 
-DELETE https://project-fin.onrender.com/user HTTP/1.1
+DELETE https://project-fin.onrender.com/user/6358c7ed4f7bcd50e9a6b48a HTTP/1.1
 content-type: application/json
