@@ -9,8 +9,8 @@
   "basePath": "/",
   "tags": [
     {
-      "name": "Events",
-      "description": "Endpoints for Events"
+      "name": "Recipes",
+      "description": "Endpoints for recipes"
     }
   ],
   "schemes": [
@@ -21,7 +21,11 @@
       "get": {
         "description": "",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/recipes/": {
