@@ -11,8 +11,8 @@ describe('Test Handlers', () => {
         expect(res.statusCode).toBe(200)
     })
 
-    test('responds to /users', async () => {
-        const res = await request.get('/users');
+    test('responds to /user', async () => {
+        const res = await request.get('/user');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
         expect(res.statusCode).toBe(200)
     })

@@ -12,34 +12,41 @@ describe('insert', () => {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        db = await connection.db('users')
+        db = await connection.db('user')
     });
     afterAll(async() => {
         await connection.close()
     })
 
     it('should insert a new user into the users collection', async () => {
-        const users = db.collection('users');
+        const users = db.collection('user');
 
         const mockUser = {
-            id: 'some-user-id',
-            firstName: "John",
-            lastName: "turner",
+            _id: '12345678',          
+            given_name: "William",
+            family_name: "Turner",
+            nickname: "will",
+            name: 25,
+            picture: null,
+            locale: null,
+            updated_at: null,
             email: "johnturner@gmail.com",
-            age: 25,
+            email_verified: null,
+            sub: null,
+            sid: null,
         }
 
         await users.insertOne(mockUser)
 
-        const insertedUser = await users.findOne({ id: 'some-user-id' });
+        const insertedUser = await users.findOne({ id: '12345678' });
 
         expect(insertedUser).toEqual(mockUser)
     },
         
     it('should delete a user from the users collection', async () => {
         const users = db.collection('user')
-        await users.deleteMany({ id: 'some-user-id' })
-        const deletedUser = await users.findOne({ id: 'some-user-id' });
+        await users.deleteMany({ id: '12345678' })
+        const deletedUser = await users.findOne({ id: '12345678' });
         expect(deletedUser).toEqual(null)
     })
 )})

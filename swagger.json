@@ -5,7 +5,7 @@
     "description": "Temple API",
     "version": "1.0.0"
   },
-  "host": "project-fin.onrender.com",
+  "host": "project-finish.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
