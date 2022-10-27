@@ -204,16 +204,16 @@ content-type: application/json
 
 // PRODUCTION Deploy
 ###
-GET https://project-fin.onrender.com/recipes
+GET https://project-finish.onrender.com/recipes
 ###
-GET https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c5
+GET https://project-finish.onrender.com/recipes/6334dc03a8cbdbc7754989c5
 ###
-GET https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c6
+GET https://project-finish.onrender.com/recipes/6334dc03a8cbdbc7754989c6
 ###
-GET https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c7
+GET https://project-finish.onrender.com/recipes/6334dc03a8cbdbc7754989c7
 
 ### Create recipe 
-POST https://project-fin.onrender.com/recipes HTTP/1.1
+POST https://project-finish.onrender.com/recipes HTTP/1.1
 content-type: application/json
 
 {
@@ -248,7 +248,7 @@ content-type: application/json
 
 
 ### PUT recipe 
-PUT https://project-fin.onrender.com/recipes/6334dc03a8cbdbc7754989c8 HTTP/1.1
+PUT https://project-finish.onrender.com/recipes/6334dc03a8cbdbc7754989c8 HTTP/1.1
 content-type: application/json
 
 {
@@ -284,7 +284,7 @@ content-type: application/json
   ]
 }
 ### DELETE recipe 
-DELETE https://project-fin.onrender.com/recipes/6341e18d804fa66b4abf3205 HTTP/1.1
+DELETE https://project-finish.onrender.com/recipes/6359d3ca97de5a3426bf6af4 HTTP/1.1
 content-type: application/json
 
 {
@@ -318,11 +318,11 @@ content-type: application/json
 }
 
 ###
-GET https://project-fin.onrender.com/comments
+GET https://project-finish.onrender.com/comments
 ###
-GET https://project-fin.onrender.com/comments/635478ad0b4dc5c342127489
+GET https://project-finish.onrender.com/comments/635478ad0b4dc5c342127489
 ### Create comment 
-POST https://project-fin.onrender.com/comments HTTP/1.1
+POST https://project-finish.onrender.com/comments HTTP/1.1
 content-type: application/json
 
 {
@@ -333,7 +333,7 @@ content-type: application/json
 }
 
 ### Update comment 
-PUT https://project-fin.onrender.com/comments HTTP/1.1
+PUT https://project-finish.onrender.com/comments HTTP/1.1
 content-type: application/json
 
 {
@@ -344,15 +344,15 @@ content-type: application/json
 }
 
 ### Delete comment 
-DELETE https://project-fin.onrender.com/comments/635478ad0b4dc5c34212748c HTTP/1.1
+DELETE https://project-finish.onrender.com/comments/635478ad0b4dc5c34212748c HTTP/1.1
 content-type: application/json
 
 ###
-GET https://project-fin.onrender.com/images
+GET https://project-finish.onrender.com/images
 ###
-GET https://project-fin.onrender.com/images/635478f10b4dc5c34212749a
+GET https://project-finish.onrender.com/images/635478f10b4dc5c34212749a
 ### Create image 
-POST https://project-fin.onrender.com/images HTTP/1.1
+POST https://project-finish.onrender.com/images HTTP/1.1
 content-type: application/json
 
 {
@@ -364,7 +364,7 @@ content-type: application/json
 }
 
 ### Update image 
-PUT https://project-fin.onrender.com/images/635478f10b4dc5c342127497 HTTP/1.1
+PUT https://project-finish.onrender.com/images/635478f10b4dc5c342127497 HTTP/1.1
 content-type: application/json
 
 {
@@ -376,15 +376,15 @@ content-type: application/json
 }
 
 ### Delete image 
-DELETE https://project-fin.onrender.com/images/635478f10b4dc5c342127498 HTTP/1.1
+DELETE https://project-finish.onrender.com/images/635478f10b4dc5c342127498 HTTP/1.1
 content-type: application/json
 
 ###
-GET https://project-fin.onrender.com/user
+GET https://project-finish.onrender.com/user
 ###
-GET https://project-fin.onrender.com/user/6358c7b84f7bcd50e9a6b489
+GET https://project-finish.onrender.com/user/6358c7b84f7bcd50e9a6b489
 ### Create user 
-POST https://project-fin.onrender.com/user HTTP/1.1
+POST https://project-finish.onrender.com/user HTTP/1.1
 content-type: application/json
 
 {
@@ -394,7 +394,7 @@ content-type: application/json
 }
 
 ### Update user 
-PUT https://project-fin.onrender.com/user/6358c8084f7bcd50e9a6b48b HTTP/1.1
+PUT https://project-finish.onrender.com/user/6358c8084f7bcd50e9a6b48b HTTP/1.1
 content-type: application/json
 
 {
@@ -404,5 +404,5 @@ content-type: application/json
 }
 
 ### Delete user 
-DELETE https://project-fin.onrender.com/user/6358c7ed4f7bcd50e9a6b48a HTTP/1.1
+DELETE https://project-finish.onrender.com/user/6358c7ed4f7bcd50e9a6b48a HTTP/1.1
 content-type: application/json
