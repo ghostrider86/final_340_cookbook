@@ -4,8 +4,6 @@ const swaggerDocument = require('../swagger.json');
 const { requiresAuth } = require('express-openid-connect');
 require('dotenv').config();
 router.use('/api-docs', swaggerUi.serve);
-router.get('/api-docs', requiresAuth(), swaggerUi.serve, swaggerUi.setup(swaggerDocument), (req,res) => {
-    res.send(JSON.stringify(req.oidc.user));
-});
+router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 module.exports = router;
