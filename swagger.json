@@ -1,21 +1,31 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Recipe API",
+    "title": "CSE341 Team Project -- Cook book",
+    "description": "A program where one can view and edit recipes",
     "version": "1.0.0"
   },
   "host": "project-finish.onrender.com",
   "basePath": "/",
+  "tags": [
+    {
+      "name": "Events",
+      "description": "Endpoints for Events"
+    }
+  ],
   "schemes": [
     "https"
   ],
   "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/recipes/": {
       "get": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "produces": [
           "application/json"
@@ -28,41 +38,34 @@
         }
       },
       "post": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "parameters": [
           {
-            "Recipe": {
+            "name": "body",
+            "in": "body",
+            "schema": {
               "type": "object",
               "properties": {
                 "Name": {
-                  "type": "string"
+                  "example": "any"
                 },
                 "url": {
-                  "type": "string"
+                  "example": "any"
                 },
                 "Description": {
-                  "type": "string"
+                  "example": "any"
                 },
                 "Author": {
-                  "type": "string"
+                  "example": "any"
                 },
                 "type": {
-                  "type": "string"
+                  "example": "any"
                 },
                 "Ingredients": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "example": "any"
                 },
                 "Method": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "example": "any"
                 }
               }
             }
@@ -80,9 +83,6 @@
     },
     "/recipes/{id}": {
       "get": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "produces": [
           "application/json"
@@ -102,44 +102,41 @@
         }
       },
       "put": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "parameters": [
           {
             "name": "id",
-            "recipe name": "Name",
             "in": "path",
             "required": true,
             "type": "string"
           },
           {
-            "Name": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            },
-            "Description": {
-              "type": "string"
-            },
-            "Author": {
-              "type": "string"
-            },
-            "type": {
-              "type": "string"
-            },
-            "Ingredients": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "Method": {
-              "type": "array",
-              "items": {
-                "type": "string"
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "example": "any"
+                },
+                "url": {
+                  "example": "any"
+                },
+                "Description": {
+                  "example": "any"
+                },
+                "Author": {
+                  "example": "any"
+                },
+                "type": {
+                  "example": "any"
+                },
+                "Ingredients": {
+                  "example": "any"
+                },
+                "Method": {
+                  "example": "any"
+                }
               }
             }
           }
@@ -149,7 +146,7 @@
             "description": "No Content"
           },
           "400": {
-            "description": "Invalid Name"
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"
@@ -157,14 +154,153 @@
         }
       },
       "delete": {
-        "tags": [
-          "Recipes"
-        ],
         "description": "",
         "parameters": [
           {
             "name": "id",
-            "recipe name": "Name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/comments/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "example": "any"
+                },
+                "Author": {
+                  "example": "any"
+                },
+                "comment_text": {
+                  "example": "any"
+                },
+                "recipe_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/comments/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "example": "any"
+                },
+                "Author": {
+                  "example": "any"
+                },
+                "comment_text": {
+                  "example": "any"
+                },
+                "recipe_id": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -174,8 +310,306 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "Invalid Name"
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/images/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "example": "any"
+                },
+                "url": {
+                  "example": "any"
+                },
+                "Quality": {
+                  "example": "any"
+                },
+                "Description": {
+                  "example": "any"
+                },
+                "Type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/images/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "example": "any"
+                },
+                "Quality": {
+                  "example": "any"
+                },
+                "Description": {
+                  "example": "any"
+                },
+                "Type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "given_name": {
+                  "example": "any"
+                },
+                "family_name": {
+                  "example": "any"
+                },
+                "nickname": {
+                  "example": "any"
+                },
+                "name": {
+                  "example": "any"
+                },
+                "picture": {
+                  "example": "any"
+                },
+                "locale": {
+                  "example": "any"
+                },
+                "updated_at": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "email_verified": {
+                  "example": "any"
+                },
+                "sub": {
+                  "example": "any"
+                },
+                "sid": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/user/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "given_name": {
+                  "example": "any"
+                },
+                "family_name": {
+                  "example": "any"
+                },
+                "nickname": {
+                  "example": "any"
+                },
+                "name": {
+                  "example": "any"
+                },
+                "picture": {
+                  "example": "any"
+                },
+                "locale": {
+                  "example": "any"
+                },
+                "updated_at": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "email_verified": {
+                  "example": "any"
+                },
+                "sub": {
+                  "example": "any"
+                },
+                "sid": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
@@ -183,5 +617,5 @@
         }
       }
     }
-   }
   }
+}
